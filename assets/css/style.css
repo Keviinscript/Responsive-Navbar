@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+      font-family: Poppins,sans-serif;
+    }
+  }
+
+html{
+  scroll-behavior: smooth;
+}
+
+.nav{
+    box-shadow: 2px  2px 32px 2px #aecd31;
+}
+
+.active-link i{
+  color: #fff;
+}
+
+.active-link .navname{
+  color: #fff;
+  opacity: 1;
+  transform: translateY(28px);
+}
+
+.container section{
+  height: 100vh;
+  padding: 2rem 0;
+}
+
+.container h2{
+  text-align: center;
+  
+}
+
+.navlink:nth-child(1).active-link ~ .indicator{
+  transform: translateX(calc(56px * 0));
+}
+
+.navlink:nth-child(2).active-link ~ .indicator{
+  transform: translateX(calc(56px * 1));
+}
+
+.navlink:nth-child(3).active-link ~ .indicator{
+  transform: translateX(calc(56px * 2));
+}
+
+.navlink:nth-child(4).active-link ~ .indicator{
+  transform: translateX(calc(56px * 3));
+}
+
+.navlink:nth-child(5).active-link ~ .indicator{
+  transform: translateX(calc(56px * 4));
+}
+
+@media screen and (max-width:320px) {
+  .nav{
+    zoom: .8;
+  }
+}
+
+@media screen and (min-width:986px) {
+  .nav{
+    zoom: 1.1 ;
+  }
+}
+
